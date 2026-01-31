@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endless Pixel Runner - How Far Can You Go?</title>
+    <meta name="description" content="An endless runner platformer game - jump, dodge, and survive as long as you can!">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- HUD Overlay -->
+    <div class="hud">
+        <div class="hud-top">
+            <div class="score-display">
+                <div class="score-label">DISTANCE</div>
+                <div id="score" class="score-value">0</div>
+            </div>
+            <div class="speed-display">
+                <div class="speed-label">SPEED</div>
+                <div id="speed" class="speed-value">1.0x</div>
+            </div>
+        </div>
+        <div class="lives-display">
+            <span id="lives">❤️❤️❤️</span>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="game-over-screen hidden">
+        <div class="game-over-content">
+            <h1 class="game-over-title">GAME OVER</h1>
+            <div class="final-stats">
+                <p class="stat-line">Distance: <span id="finalScore">0</span>m</p>
+                <p class="stat-line">Best: <span id="bestScore">0</span>m</p>
+            </div>
+            <button id="restartBtn" class="restart-btn">▶ PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
